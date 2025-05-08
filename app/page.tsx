@@ -1,55 +1,34 @@
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
-
-import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+    <section className="flex flex-col items-center justify-center gap-2">
       <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Make&nbsp;</span>
-        <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
+        <span className={title()}>Feiere&nbsp;</span>
+        <span className={title({ color: "violet" })}>Bobby&apos;s&nbsp;</span>
         <br />
-        <span className={title()}>
-          websites regardless of your design experience.
-        </span>
+        <span className={title()}>Geburtstag im</span>
+        <br />
+        <span className={title()}>James-Simon-Park</span>
         <div className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
+          Keine Geschenke. Nur Lebensmittel, Spiele und Decken.
         </div>
+        <p className="text-inherit">
+          Bis jetzt plane ich den Start zwischen 14 Uhr und 16 Uhr, je nachdem ob ich ein Pokemon Go Meetup habe an dem Tag.
+        </p>
       </div>
 
-      <div className="flex gap-3">
-        <Link
-          isExternal
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-          href={siteConfig.links.docs}
-        >
-          Documentation
-        </Link>
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div>
-
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-        </Snippet>
+      <div className="mt-4">
+        <iframe
+          allowFullScreen // React uses camelCase for this attribute
+          height="450"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade" // React uses camelCase here too
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429.1488320607003!2d13.399095629731885!3d52.52199144430723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851ddfe609d3b%3A0xf14557b8dbb549fe!2sJames-Simon-Park!5e0!3m2!1sde!2sde!4v1746715274564!5m2!1sde!2sde"
+          style={{ border: 0 }}
+          title="Google Maps - James-Simon-Park"
+          width="600"
+        />
       </div>
     </section>
   );
