@@ -51,7 +51,7 @@ export const Navbar = () => {
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <CakeIcon />
-            <p className="font-bold text-inherit">
+            <p className="font-bold pl-2 text-inherit">
               Am Sonntag den 22. Juni 2025
             </p>
           </NextLink>
