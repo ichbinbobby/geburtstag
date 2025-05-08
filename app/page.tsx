@@ -21,6 +21,7 @@ export default function Home() {
       <div className="mt-4">
         <iframe
           allowFullScreen // React uses camelCase for this attribute
+          className="rounded-lg" // Tailwind CSS class for rounded corners
           height="450"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade" // React uses camelCase here too
