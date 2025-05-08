@@ -11,12 +11,32 @@ import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    default: siteConfig.title,
+    template: `%s - ${siteConfig.title}`,
   },
   description: siteConfig.description,
   icons: {
     icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    images: [
+      {
+        url: siteConfig.thumbnail,
+        width: 1200,
+        height: 630,
+        alt: "James-Simon-Park",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [siteConfig.thumbnail],
   },
 };
 

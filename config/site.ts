@@ -1,67 +1,13 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + HeroUI",
-  description: "Make beautiful websites regardless of your design experience.",
-  navItems: [
-    {
-      label: "Home",
-      href: "/",
-    },
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    },
-  ],
-  navMenuItems: [
-    {
-      label: "Profile",
-      href: "/profile",
-    },
-    {
-      label: "Dashboard",
-      href: "/dashboard",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
-    },
-  ],
+  description: "Feiere Bobby's Geburtstag im James-Simon-Park. Keine Geschenke, nur Lebensmittel, Spiele und Decken.",
   links: {
-    github: "https://github.com/ichbinbobby/geburtstag",
     discord: "https://discord.com/invite/9R4BRdM",
+    github: "https://github.com/ichbinbobby/geburtstag",
     referals: "https://referals.ichbinbobby.de/",
   },
+  thumbnail: "/thumbnail.jpg",
+  title: "Bobby's Geburtstag im James-Simon-Park",
+  url: "https://geburtstag.ichbinbobby.de/",
 };
