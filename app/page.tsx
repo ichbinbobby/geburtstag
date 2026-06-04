@@ -8,29 +8,29 @@ export default function Home() {
           <span className={title()}>Feiere&nbsp;</span>
           <span className={title({ color: "violet" })}>Bobby&apos;s&nbsp;</span>
           <br />
-          <span className={title()}>Geburtstag im</span>
+          <span className={title()}>Geburtstag beim </span>
           <br />
-          <span className={title()}>James-Simon-Park</span>
+          <span className={title()}>Mega-Raid-Tag</span>
+          <br />
+          <span className={title()}>am Alexanderplatz</span>
           <div className={subtitle({ class: "mt-4" })}>
-            Keine Geschenke. Nur Lebensmittel, Spiele und Decken.
+            5 Raidpässe gratis
           </div>
           <p className="text-inherit">
-            Wir suchen uns ab 14 Uhr einen schönen Platz im Park, vermutlich im Halbschatten eines Baumes mit Blick auf die Spree. Nehmt mit, was ihr essen wollt und genug zu trinken. Es wird wahrscheinlich sehr warm.
+            Wir treffen uns vor dem dm Drogeriemarkt am Alex und spielen den Mega-Raid-Tag. Danach können wir uns irgendwo hinpflanzen und chillen.
           </p>
         </div>
 
         <div className="mt-4">
-          <iframe
-            allowFullScreen
-            className="rounded-lg"
-            height="450"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429.1488320607003!2d13.399095629731885!3d52.52199144430723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851ddfe609d3b%3A0xf14557b8dbb549fe!2sJames-Simon-Park!5e0!3m2!1sde!2sde!4v1746715274564!5m2!1sde!2sde"
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d171.48480150181575!2d13.41273871731954!3d52.52156776653275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sde!2sde!4v1780577469673!5m2!1sde!2sde" 
+            width="600" 
+            height="450" 
             style={{ border: 0 }}
-            title="Google Maps - James-Simon-Park"
-            width="600"
-          />
+            allowFullScreen 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </section>
     </>
