@@ -1,7 +1,65 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  description: "Feiere Bobby's Geburtstag beim Mega-Raid-Tag am Alex ab 14 Uhr oder im James-Simon-Park ab 15 Uhr. Keine Geschenke, nur Lebensmittel, Spiele und Decken.",
+  name: "Bobby's Geburtstag",
+  description:
+    "Feiere Bobby's Geburtstag beim Mega-Raid-Tag am Alex ab 14 Uhr oder im James-Simon-Park ab 16 Uhr. Keine Geschenke, nur Lebensmittel, Spiele und Decken.",
+  navItems: [
+    {
+      label: "Home",
+      href: "/",
+    },
+    {
+      label: "Docs",
+      href: "/docs",
+    },
+    {
+      label: "Pricing",
+      href: "/pricing",
+    },
+    {
+      label: "Blog",
+      href: "/blog",
+    },
+    {
+      label: "About",
+      href: "/about",
+    },
+  ],
+  navMenuItems: [
+    {
+      label: "Profile",
+      href: "/profile",
+    },
+    {
+      label: "Dashboard",
+      href: "/dashboard",
+    },
+    {
+      label: "Projects",
+      href: "/projects",
+    },
+    {
+      label: "Team",
+      href: "/team",
+    },
+    {
+      label: "Calendar",
+      href: "/calendar",
+    },
+    {
+      label: "Settings",
+      href: "/settings",
+    },
+    {
+      label: "Help & Feedback",
+      href: "/help-feedback",
+    },
+    {
+      label: "Logout",
+      href: "/logout",
+    },
+  ],
   links: {
     discord: "https://discord.com/invite/9R4BRdM",
     github: "https://github.com/ichbinbobby/geburtstag",

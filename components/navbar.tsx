@@ -1,71 +1,136 @@
-import {
-  Navbar as HeroUINavbar,
-  NavbarContent,
-  NavbarMenuToggle,
-  NavbarBrand,
-  NavbarItem,
-} from "@heroui/navbar";
-import { Button } from "@heroui/button";
-import { Link } from "@heroui/link";
+"use client";
+
+import { useState } from "react";
+import { Button, Link } from "@heroui/react";
 import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
+  CakeIcon,
   GithubIcon,
   DiscordIcon,
   HeartFilledIcon,
-  CakeIcon,
 } from "@/components/icons";
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
-        <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <CakeIcon />
-            <p className="font-bold pl-2 text-inherit">
-              Am Samstag den 27. Juni 2025 ab 14 Uhr und ohne Pokemon GO ab 15 Uhr
+    <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg">
+      <header className="mx-auto flex h-16 max-w-[1280px] items-center justify-between gap-4 px-6">
+        <div className="flex items-center gap-3">
+          <NextLink className="flex items-center gap-2 text-inherit" href="/">
+            <CakeIcon className="text-foreground" />
+            <p className="font-bold text-inherit leading-tight">
+              Am Samstag den 27. Juni 2025 ab 14 Uhr und ohne Pokemon GO ab 16
+              Uhr
             </p>
           </NextLink>
-        </NavbarBrand>
-      </NavbarContent>
+        </div>
 
-      <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
-        <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
-            <DiscordIcon className="text-default-500" />
+        <div className="hidden sm:flex items-center gap-3">
+          <Link
+            aria-label="Discord"
+            href={siteConfig.links.discord}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <DiscordIcon className="text-muted" />
           </Link>
-          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-            <GithubIcon className="text-default-500" />
+          <Link
+            aria-label="Github"
+            href={siteConfig.links.github}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <GithubIcon className="text-muted" />
           </Link>
           <ThemeSwitch />
-        </NavbarItem>
-        <NavbarItem className="hidden md:flex">
           <Button
-            isExternal
-            as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.referals}
-            startContent={<HeartFilledIcon className="text-danger" />}
-            variant="flat"
+            className="text-sm font-normal"
+            variant="tertiary"
+            onPress={() => window.open(siteConfig.links.referals, "_blank")}
           >
+            <HeartFilledIcon className="text-danger" />
             Support Bobby
           </Button>
-        </NavbarItem>
-      </NavbarContent>
+        </div>
 
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link>
-        <ThemeSwitch />
-        <NavbarMenuToggle />
-      </NavbarContent>
-    </HeroUINavbar>
+        <div className="flex sm:hidden items-center gap-2">
+          <Link
+            aria-label="Github"
+            href={siteConfig.links.github}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <GithubIcon className="text-muted" />
+          </Link>
+          <ThemeSwitch />
+          <button
+            aria-expanded={isMenuOpen}
+            aria-label="Toggle menu"
+            className="p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              {isMenuOpen ? (
+                <path
+                  d="M6 18L18 6M6 6l12 12"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                />
+              ) : (
+                <path
+                  d="M4 6h16M4 12h16M4 18h16"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                />
+              )}
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      {isMenuOpen && (
+        <div className="border-t border-separator sm:hidden">
+          <div className="flex flex-col gap-3 p-4">
+            <div className="flex items-center gap-3">
+              <Link
+                aria-label="Discord"
+                href={siteConfig.links.discord}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <DiscordIcon className="text-muted" />
+              </Link>
+              <Link
+                aria-label="Github"
+                href={siteConfig.links.github}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <GithubIcon className="text-muted" />
+              </Link>
+            </div>
+            <Button
+              className="text-sm font-normal"
+              variant="tertiary"
+              onPress={() => window.open(siteConfig.links.referals, "_blank")}
+            >
+              <HeartFilledIcon className="text-danger" />
+              Support Bobby
+            </Button>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 };
