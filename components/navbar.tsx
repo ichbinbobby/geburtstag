@@ -23,8 +23,7 @@ export const Navbar = () => {
           <NextLink className="flex items-center gap-2 text-inherit" href="/">
             <CakeIcon className="text-foreground" />
             <p className="font-bold text-inherit leading-tight">
-              Am Samstag den 27. Juni 2025 ab 14 Uhr und ohne Pokemon GO ab 16
-              Uhr
+              Am Sonntag den 19. Juli ab 14 Uhr
             </p>
           </NextLink>
         </div>

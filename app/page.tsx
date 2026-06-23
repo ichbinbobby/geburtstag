@@ -8,20 +8,19 @@ export default function Home() {
           <span className={title()}>Feiere&nbsp;</span>
           <span className={title({ color: "violet" })}>Bobby&apos;s&nbsp;</span>
           <br />
-          <span className={title()}>Geburtstag beim </span>
+          <span className={title()}>Geburtstag am </span>
           <br />
-          <span className={title()}>Mega-Raid-Tag</span>
+          <span className={title()}>Sonntag den 19. Juli</span>
           <br />
-          <span className={title()}>am Alexanderplatz</span>
+          <span className={title()}>im James-Simon-Park</span>
           <div className={subtitle({ class: "mt-4" })}>
-            Oder 16 Uhr im James-Simon-Park
+            Bring dein Trinken und Essen mit
           </div>
           <p className="text-inherit">
-            Wir treffen uns 14 Uhr vor dem dm Drogeriemarkt am Alex und spielen
-            den Mega-Raid-Tag oder 16 Uhr auf ner Wiese im James-Simon-Park. Ich
+            Wir treffen uns 14 Uhr auf der Wiese im James-Simon-Park. Ich
             bringe Decken zum Sitzen mit. Bitte bringt euer eigenes Essen und
-            Trinken mit. In der nähe gibt es ein Rewe. Keine materiellen
-            Geschenke bitte.
+            Trinken mit. Am Hackeschen Markt gibt es Döner, Pizza, Pommes, Banh Mi, Bubble Tea usw. 
+            Keine materiellen Geschenke bitte.
           </p>
         </div>
 
