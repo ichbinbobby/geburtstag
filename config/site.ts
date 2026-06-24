@@ -82,6 +82,18 @@ export const siteConfig = {
       label: "POPUP SUSHI",
       href: "https://maps.app.goo.gl/TSyR5oKpvoLdFhHF8",
       tags: ["vegetarisch", "fleisch"],
+    },
+    {
+      category: "sushi",
+      label: "Lee - Original Vietnamese Kitchen",
+      href: "https://maps.app.goo.gl/RQyhNKksBunQK6wC7",
+      tags: ["vegan", "vegetarisch", "fleisch"],
+    },
+    {
+      category: "sushi",
+      label: "Friendly Fish",
+      href: "https://maps.app.goo.gl/GXK75SRbWxF6gdnq6",
+      tags: ["vegan", "vegetarisch", "fleisch"],
     }, 
     {
       category: "burger",
@@ -102,10 +114,34 @@ export const siteConfig = {
       tags: ["vegan", "vegetarisch", "fleisch"],
     },
     {
+      category: "salad",
+      label: "dean&david",
+      href: "https://maps.app.goo.gl/9hUx8C6tyqd2wdVj8",
+      tags: ["vegan", "vegetarisch", "fleisch"],
+    },
+    {
+      category: "bakery",
+      label: "Brotmeisterei Steinecke",
+      href: "https://maps.app.goo.gl/kREp9pPNsKzPbKkL8",
+      tags: ["vegan", "vegetarisch", "fleisch"],
+    },
+    {
+      category: "bakery",
+      label: "Kamps Bäckerei mit Backstube",
+      href: "https://maps.app.goo.gl/jzVREnDNGRNaKbPy7",
+      tags: ["vegan", "vegetarisch", "fleisch"],
+    },
+    {
       category: "pastry",
       label: "CINNAMOOD",
       href: "https://maps.app.goo.gl/YoBuQVtgbjC21QBA7",
       tags: ["vegetarisch"],
+    },
+    {
+      category: "pastry",
+      label: "Crusty Slices",
+      href: "https://maps.app.goo.gl/LuBTGa8qZJaBeVDMA",
+      tags: ["vegetarisch", "fleisch"],
     },
     {
       category: "icecream",
