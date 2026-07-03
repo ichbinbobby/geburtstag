@@ -1,6 +1,17 @@
+// coords: [lat, lng] — add for chains with multiple Berlin locations so the map pins exactly.
+// Without coords, the map searches by name near Hackescher Markt.
+
+interface FoodItem {
+  category: string;
+  label: string;
+  href: string;
+  tags: string[];
+  coords?: [number, number];
+}
+
 export type SiteConfig = typeof siteConfig;
 
-export const siteConfig = {
+export const siteConfig: { name: string; description: string; food: FoodItem[]; links: Record<string, string>; thumbnail: string; title: string; url: string } = {
   name: "Bobby's Geburtstag",
   description:
     "Feiere Bobby's Geburtstag am Sonntag den 19. Juli ab 14 Uhr im James-Simon-Park. Keine Geschenke, nur Lebensmittel, Spiele und Decken.",
