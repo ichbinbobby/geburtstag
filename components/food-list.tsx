@@ -116,8 +116,8 @@ export function FoodList({ selected, onSelect }: FoodListProps) {
               }
               const selectedIds = state.selectedItems.map((i: any) => i.key);
               return (
-                <TagGroup size="sm" onRemove={onRemoveTags}>
-                  <TagGroup.List>
+                <TagGroup size="sm" onRemove={onRemoveTags} aria-label="Aktive Filter">
+                  <TagGroup.List aria-label="Aktive Filter">
                     {selectedIds.map((id: Key) => {
                       const item = allFilterItems.find((f) => f.id === id);
                       if (!item) return null;
@@ -133,7 +133,7 @@ export function FoodList({ selected, onSelect }: FoodListProps) {
         <DialogContext.Provider value={{"aria-label": "Filter-Optionen"}}>
         <Autocomplete.Popover>
           <Autocomplete.Filter filter={contains}>
-            <SearchField autoFocus name="search" variant="secondary">
+            <SearchField autoFocus aria-label="Filtern" name="search" variant="secondary">
               <SearchField.Group>
                 <SearchField.SearchIcon />
                 <SearchField.Input placeholder="Suchen…" />

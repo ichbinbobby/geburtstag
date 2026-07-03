@@ -135,6 +135,7 @@ export const siteConfig: { name: string; description: string; food: FoodItem[]; 
       label: "Brotmeisterei Steinecke",
       href: "https://maps.app.goo.gl/kREp9pPNsKzPbKkL8",
       tags: ["vegan", "vegetarisch", "fleisch"],
+      coords: [52.52334185877685, 13.403618115339517],
     },
     {
       category: "bakery",
