@@ -4,10 +4,7 @@ import { useState } from "react";
 
 import { title, subtitle } from "@/components/primitives";
 import { FoodList } from "@/components/food-list";
-import { siteConfig } from "@/config/site";
-
-const PARK_EMBED =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d338.1937619936602!2d13.398854487968153!3d52.521902352403174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851ddfe609d3b%3A0xf14557b8dbb549fe!2sJames-Simon-Park!5e1!3m2!1sde!2sde!4v1782128738658!5m2!1sde!2sde";
+import { siteConfig, event } from "@/config/site";
 
 function buildEmbedUrl(label: string, coords?: [number, number]) {
   if (coords) {
@@ -17,13 +14,13 @@ function buildEmbedUrl(label: string, coords?: [number, number]) {
 }
 
 export function HomeContent() {
-  const [mapSrc, setMapSrc] = useState(PARK_EMBED);
+  const [mapSrc, setMapSrc] = useState(event.mapEmbed);
   const [selected, setSelected] = useState<string | null>(null);
 
   const handleSelect = (label: string) => {
     if (selected === label) {
       setSelected(null);
-      setMapSrc(PARK_EMBED);
+      setMapSrc(event.mapEmbed);
     } else {
       const item = siteConfig.food.find((f) => f.label === label);
       setSelected(label);
@@ -40,17 +37,14 @@ export function HomeContent() {
           <br />
           <span className={title()}>Geburtstag am </span>
           <br />
-          <span className={title()}>Sonntag den 19. Juli</span>
+          <span className={title()}>{event.date}</span>
           <br />
-          <span className={title()}>im James-Simon-Park</span>
+          <span className={title()}>im {event.location}</span>
           <div className={subtitle({ class: "mt-4" })}>
-            Bring dein Trinken und Essen mit
+            {event.subtitle}
           </div>
           <p className="text-inherit">
-            Wir treffen uns 14 Uhr auf der Wiese im James-Simon-Park. Ich
-            bringe Decken zum Sitzen mit. Bitte bringt euer eigenes Essen und
-            Trinken mit. Am Hackeschen Markt gibt es Döner, Pizza, Pommes, Banh
-            Mi, Bubble Tea usw. Keine materiellen Geschenke bitte.
+            {event.bodyText}
           </p>
         </div>
 

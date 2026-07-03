@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button, Link } from "@heroui/react";
 import NextLink from "next/link";
 
-import { siteConfig } from "@/config/site";
+import { siteConfig, event } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
   CakeIcon,
@@ -23,7 +23,7 @@ export const Navbar = () => {
           <NextLink className="flex items-center gap-2 text-inherit" href="/">
             <CakeIcon className="text-foreground" />
             <p className="font-bold text-inherit leading-tight">
-              Am Sonntag den 19. Juli ab 14 Uhr
+              Am {event.date} ab {event.time}
             </p>
           </NextLink>
         </div>
